@@ -49,7 +49,7 @@ let certificates =
         img: "IYF.png",
         alt: "International Youth Foundation - Passport to Succes",
         title: "International Youth Foundation - Passport to Success",
-        description: "Certificate of Attendance - 4 days Training of Trainers Workshop"
+        description: "Certificate of Attendance - Training of Trainers Workshop"
     }
     , {
         id: 8,
@@ -135,20 +135,20 @@ let certificates =
         title: "Participated in the CIC Academy Course III",
         description: "#DatosMoProtektado"
     },
-    // {
-    //     id: 20,
-    //     img: "DSC2021.png",
-    //     alt: "District Skills Competition",
-    //     title: "2021 District Skills Competition",
-    //     description: "Gold Medalist in <b>Web Technology</b> as a <b>Competitor</b>"
-    // },
-    // {
-    //     id: 21,
-    //     img: "DSC2021.png",
-    //     alt: "District Skills Competition",
-    //     title: "2021 District Skills Competition",
-    //     description: "Gold Medalist in <b>Web Technology</b> as a <b>Competitor</b>"
-    // }
+    {
+        id: 20,
+        img: "Ai-Basics.png",
+        alt: "Introduction to AI",
+        title: "Certificate of Attendace",
+        description: "Webinar - Intoduction to  - Understanding the Basics"
+    },
+    {
+        id: 21,
+        img: "English1.png",
+        alt: "English for IT 1",
+        title: "Statement of Achievement",
+        description: "Completing the English for IT 1 course, provided by Cisco Networking Academy"
+    }
 
 ]
 
@@ -156,7 +156,7 @@ certificates.forEach(cert => {
 
     certificates_con.innerHTML += 
     `
-        <div class="cover">
+        <div class="cover" onclick='load(${cert.id})'>
             <div class="cover-img">
                 <img src="media/certificates/${cert.img}" alt="${cert.alt}">
             </div>                        
@@ -170,22 +170,81 @@ certificates.forEach(cert => {
     `
 });
 
+// slideshow
+let view_panel = document.getElementById("view-panel")
+let back = document.getElementById("back")
+let _header = document.querySelectorAll("header")[0];
+let active = document.getElementById("active")
 
-// certificates.forEach(cert => {
+let _ctr = 0;
 
-//     certificates_con.innerHTML +=
-//     `
-//         <div class="cover">
-//             <div class="cover-img">
-//                 <img src="media/certificates/${cert.img}.png" alt="${cert.alt}">
-//             </div>                
-//             <div class="shadow">              
-//             </div>
-//              <div class="description">
-//                 <h1>${cert.title}</h1>                    
-//                 <p>${cert.description}</p>
-//             </div>
-//         </div>
-//     `
 
-// });
+function load(ctr){
+
+    view_panel.style.transform = "scale(1)"
+    _header.style.zIndex = "-99999"
+
+    certificates.forEach(_cert => {
+        if(ctr == _cert.id){
+            active.innerHTML = `<img src="media/certificates/${_cert.img}" alt="${_cert.alt}" class="active-img">`
+        }
+        _ctr = ctr;
+    })
+    
+    // if(ctr == 1){
+    //     active.innerHTML = "Competitor 1"
+    //     _ctr = ctr
+    // }else if(ctr == 2){
+    //     active.innerHTML = "Competitor 2"
+    //     _ctr = ctr
+    // }else if(ctr == 3){
+    //     active.innerHTML = "Competitor 3"
+    //     _ctr = ctr
+    // }
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function _load(ctr){
+    // alert("Hello" + ctr)
+    certificates.forEach(_cert => {
+        if(ctr == _cert.id){
+            active.innerHTML = `<img src="media/certificates/${_cert.img}" alt="${_cert.alt}" class="active-img">`
+        }
+        _ctr = ctr;
+    })
+
+    console.log(_ctr)
+}
+ 
+
+
+back.addEventListener('click', function(){
+    view_panel.style.transform = "scale(0)"
+    _header.style.zIndex = "99999"
+    document.body.style.overflow = "visible";
+})
+
+
+function _prev(){
+    
+    if(_ctr == 1){
+        _ctr = certificates.length
+    }else{
+        _ctr -= 1
+    }
+
+    _load(_ctr)
+}
+
+function _next(){
+    
+    if(_ctr == certificates.length){
+        _ctr = 1
+    }else{
+        _ctr += 1
+    }
+
+    _load(_ctr)
+}

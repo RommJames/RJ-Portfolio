@@ -58,6 +58,9 @@
     transform: scale(1.1);
 }
 
+a{
+    text-decoration: none;
+}
 
 .game-btn{
     display: block;

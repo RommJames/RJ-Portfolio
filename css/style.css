@@ -2,12 +2,22 @@
 /* Roots */ 
 @font-face {
     font-family: Heading;
-    src: url(../fonts/TitilliumWeb-Black.ttf);
+    src: url(./../fonts/TitilliumWeb-Black.ttf);
 }
 
 @font-face {
     font-family: main-font;
-    src: url(../fonts/TitilliumWeb-regular.ttf);
+    src: url(./../fonts/TitilliumWeb-Light.ttf);
+}
+
+@font-face {
+    font-family: reg;
+    src: url(./../fonts/TitilliumWeb-Light.ttf);
+}
+
+@font-face {
+    font-family: reg2;
+    src: url(./../fonts/TitilliumWeb-Regular.ttf);
 }
 
 :root{
@@ -20,7 +30,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: main-font;
+    font-family: reg2, reg, Heading;
     transition: all 0.3s ease-in-out;
     scroll-behavior: smooth;
 }
@@ -133,7 +143,7 @@ nav ul li a:focus, nav ul li a:active{
  /* Profile */
 
  #my-picture img{
-    height: 500px;
+    height: 550px;
  }
 
  #profile{
@@ -143,8 +153,9 @@ nav ul li a:focus, nav ul li a:active{
     flex-wrap: wrap;
     box-shadow: 20px 0px 15px 0px rgba(0, 0, 0, 0.1) inset;
     width: 76%;
-    margin: 200px 0px 15%;
+    margin: 130px 0px 6%;
     border-radius: 15px;
+    padding: 50px;
     animation: fade-right 2s 1 ease-in-out;
     /* background-color: white; */
     /* height: 500px; */
@@ -169,6 +180,7 @@ nav ul li a:focus, nav ul li a:active{
 
 #details hr{        
     border: 2px solid #f9ce3a;
+    margin-bottom: 15px;
 }
 
 /* social icon */
@@ -211,7 +223,11 @@ nav ul li a:focus, nav ul li a:active{
 /* --------------------------------------------------------------------------- */
 
 .header-title{
-    background-color: #2d305c;
+    /* background-color: #2d305c;s */
+    background: url(../media/additional/bg.png);    
+    background-position: top;
+    background-size: cover;
+    /* background-attachment: fixed; */
     color: white;
     padding: 5px 10px;
 }
@@ -338,3 +354,100 @@ nav ul li a:focus, nav ul li a:active{
     z-index: 22;
 } */
 
+/* Slidehsow */
+#view-panel{
+    position: fixed;
+    transform: scale(0);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: aliceblue;
+    z-index: 999;    
+}
+
+
+#controls{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 4rem;
+}
+
+#active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 4rem;
+}
+
+#back{
+    position: fixed;
+    top: 0;
+    font-size: 3rem;    
+    z-index: 500;
+    background-color: #f9ce3a;
+    color: white;
+    padding: 15px 25px;
+}
+
+#next-btn:hover , #prev-btn:hover, #back:hover{
+    cursor: pointer;
+    color: #363b48;
+}
+
+.active-img{
+    margin: auto;
+    height: 98%;
+    width: 75%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Contact Details */
+
+.contact-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;      
+}
+.contact-content > div{    
+    display: flex;
+    margin: 25px;
+    border-radius: 25px;
+    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    /* width: 1500px; */
+    flex-wrap: wrap;
+}
+
+.contact-img{
+    height: 500px;
+    /* width: 1500px;     */
+}
+
+.contact-img img{    
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.contact-details{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 55px;
+    /* width: 849px; */
+    /* border: 2px solid red; */
+}

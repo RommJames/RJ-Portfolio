@@ -24,7 +24,7 @@ function enterGame(){
     //     `
     // )
 
-    window.location.href = "game"
+    window.location.href = "./game/index.html"
 
     // valid = localStorage.setItem("valid", "valid");
 }

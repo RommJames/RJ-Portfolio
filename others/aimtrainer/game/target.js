@@ -111,7 +111,6 @@ function gameOver(){
     gameOverContainer.innerHTML =
     `
     <div class="over-panel">
-        <form action="backend/sample.php" method="post" >
             <div class="over-title">
                 <h1>Game Over</h1>
             </div>                
@@ -121,24 +120,10 @@ function gameOver(){
                     <li><b>Difficulty: </b> ${selectedDifficulty}</li>
                     <li><b>Score: </b> ${score} </li>
                 </ul>
+            </div>            
+            <div class="over-btn">                
+                <a href="./index.html" class="game-btn"> Restart Game </a>
             </div>
-            <div class="over-btn">
-                
-                <textarea rows="4" cols="20" placeholder="Enter Your Caption or Experience Here..." id="caption" name="caption"></textarea>
-
-                <input type="submit" value="Restart Game" class="game-btn">                
-
-                <i>(If you want to join the leaderboards, click restart game and view the leaderboards)</i>
-
-                <input type="hidden" name="playerName" id="playerName" value="${finalName}">
-
-                <input type="hidden" name="playerDifficulty" id="playerDifficulty" value="${selectedDifficulty}">
-
-                <input type="hidden" id="playerScore" name="playerScore" value="${score}">                
-
-                <input type="hidden" id="siteHost" name="siteHost" value="${hostname}">
-            </div>
-        </form>
     </div>       
     `
     
