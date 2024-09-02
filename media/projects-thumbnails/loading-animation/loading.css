@@ -1,0 +1,345 @@
+/* 1st Loading Animation  */
+/* Loading Animation Preview */
+
+.loading-container{
+    background-color: #09061c;
+    height: 300px;
+    /* width: 250px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4) inset;
+    /* border-radius: 5px; */
+}
+
+.loading-container div{
+    background-color: #44fffb;    
+    height: 100px;
+    width: 15px; 
+    border-radius: 20px;
+    margin: 5px;   
+}
+
+.loading-card:hover > .loading-container > div:nth-child(1){
+    animation-name: stick;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.1s;
+    animation-timing-function: ease-in-out;
+    /* animation-fill-mode: forwards;
+    animation-direction: alternate; */
+}
+
+.loading-card:hover > .loading-container > div:nth-child(2){
+    animation-name: stick;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in-out;
+    /* animation-fill-mode: forwards;
+    animation-direction: alternate; */
+}
+
+.loading-card:hover > .loading-container > div:nth-child(3){
+    animation-name: stick;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-in-out;
+    /* animation-fill-mode: forwards;
+    animation-direction: alternate; */
+}
+
+.loading-card:hover > .loading-container > div:nth-child(4){
+    animation-name: stick;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.4s;
+    animation-timing-function: ease-in-out;
+    /* animation-fill-mode: forwards;
+    animation-direction: alternate; */
+}
+
+@keyframes stick {
+    0%{
+        transform: scaleY(1);
+    }
+
+    50%{
+        transform: scaleY(0.5);
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+
+
+/* 2nd Loading Screen */
+/* Loading screen live for the more web application and animations example */
+.loading{
+    position: relative;
+    height: 300px;
+    /* width: 150px; */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4) inset;
+    padding: 10px;
+    /* border: 2px solid red; */
+}
+
+.loading div{
+    transition: all 0.3s ease-in-out;
+}
+
+/* #19A68C, #F63D3A, #FDA543, #193B48 */
+
+.loading div:nth-child(1){
+    position: absolute;
+    top: 15%;
+    left: 15%;    
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    background-color: #19A68C;
+
+    /* animation-direction: alternate; */
+}
+
+.loading-card:hover > .loading div:nth-child(1){
+    animation-name: _1C;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.loading div:nth-child(2){
+    position: absolute;
+    top: 15%;
+    right: 15%;    
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    background-color: #F63D3A;
+    /* animation-direction: alternate; */
+}
+
+.loading-card:hover > .loading div:nth-child(2){
+    animation-name: _2C;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+.loading div:nth-child(3){
+    position: absolute;
+    bottom: 15%;
+    left: 15%;    
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    background-color: #FDA543;
+    /* animation-direction: alternate; */
+}
+
+.loading-card:hover > .loading div:nth-child(3){
+    animation-name: _3C;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.loading div:nth-child(4){
+    position: absolute;
+    bottom: 15%;
+    right: 15%;    
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    background-color: #193B48;
+    /* animation-direction: alternate; */
+}
+
+.loading-card:hover > .loading div:nth-child(4){
+    animation-name: _4C;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes _1C {
+    0%{        
+        top: 15%;
+        left: 15%;
+        /* transition: all 0.3s ease-in-out; */
+    }
+
+    10%{
+        top: 5%;
+    }
+
+    20%{        
+        top: 0%;
+        left: 66%;
+    }
+
+    30%{
+        left: 61%;
+    }
+
+    40%{
+        top: 66%;
+        left: 66%;
+    }
+
+    50%{
+        top: 61%;
+    }
+
+    60%{
+        left: 0%;
+        top: 66%;
+    }
+
+    70%{
+        left: 5%;
+    }
+
+    80%{
+        left: 0%;
+        top: 0%;
+    }
+}
+
+@keyframes _2C {
+    0%{        
+        top: 15%;
+        right: 15%;
+        /* transition: all 0.3s ease-in-out; */
+    }
+
+    10%{
+        right: 5%;
+    }
+
+    20%{        
+        right: 0%;
+        top: 66%;
+    }
+
+    30%{
+        top: 61%;
+    }
+
+    40%{
+        top: 66%;
+        right: 66%;
+    }
+
+    50%{
+        right: 61%;
+    }
+
+    60%{
+        top: 0%;
+        right: 66%;
+    }
+
+    70%{
+        top: 5%;
+    }
+
+    80%{
+        right: 0%;
+        top: 0%;
+    }
+}
+
+@keyframes _3C {
+    0%{        
+        bottom: 15%;
+        left: 15%;
+        /* transition: all 0.3s ease-in-out; */
+    }
+
+    10%{
+        left: 5%;
+    }
+
+    20%{        
+        left: 0%;
+        bottom: 66%;
+    }
+
+    30%{
+        bottom: 61%;
+    }
+
+    40%{
+        bottom: 66%;
+        left: 66%;
+    }
+
+    50%{
+        left: 61%;
+    }
+
+    60%{
+        bottom: 0%;
+        left: 66%;
+    }
+
+    70%{
+        bottom: 5%;
+    }
+
+    80%{
+        left: 0%;
+        bottom: 0%;
+    }
+}
+
+@keyframes _4C {
+    0%{        
+        bottom: 15%;
+        right: 15%;
+        /* transition: all 0.3s ease-in-out; */
+    }
+
+    10%{
+        bottom: 5%;
+    }
+
+    20%{        
+        bottom: 0%;
+        right: 66%;
+    }
+
+    30%{
+        right: 61%;
+    }
+
+    40%{
+        bottom: 66%;
+        right: 66%;
+    }
+
+    50%{
+        bottom: 61%;
+    }
+
+    60%{
+        right: 0%;
+        bottom: 66%;
+    }
+
+    70%{
+        right: 5%;
+    }
+
+    80%{
+        right: 0%;
+        bottom: 0%;
+    }
+}

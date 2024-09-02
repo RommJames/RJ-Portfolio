@@ -1,1 +1,0 @@
-<link rel="shortcut icon" href="../../media/MFI.png" type="image/x-icon">
