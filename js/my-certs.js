@@ -146,6 +146,27 @@ let certificates =
         alt: "English for IT 1",
         title: "Statement of Achievement",
         description: "Completing the English for IT 1 course, provided by Cisco Networking Academy"
+    },
+    {
+        id: 22,
+        img:"Fundamentals-Stats.png",
+        alt: "Fundamentals of Statistics in Microsoft Excel",
+        title: "Fundamentals of Statistics in Microsoft Excel",
+        description: "A course study program offered by Data Analytics Philippines",
+    },
+    {
+        id: 23,
+        img: "Python-Essential-1.png",
+        alt: "Python Essentials 1",
+        title: "Python Essentials 1",
+        description: "Successfully achieved student level credential for completing the course, provided by Cisco Networking Academy in collaboration with OpenEDG Python Institute.",
+    },
+    {
+        id: 24,
+        img:"css-certificate.png",
+        alt: "CSS Certification Test",
+        title: "CSS Certification Test",
+        description: "The bearer of this certificate has passed the HackerRank skill certification test",
     }
 
 ]
